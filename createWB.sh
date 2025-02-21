@@ -77,7 +77,7 @@ xdftool ./WBTest.hdf open part=DH0 + pack $DEST
 # Pack DH1
 # this doesnt quite work with dopus..
 echo "Copying ADFs"
-$ ./hst.imager fs copy ADF ./WBTest.hdf/rdb/dh3/ADF
+./hst.imager fs copy ADF ./WBTest.hdf/rdb/dh3/ADF
 
 echo "Packing Games"
 find WHD/Download/Games -type f -iname "*.lha" -exec sh -c 'dir=$(basename "{}" | cut -c1 | tr "[:lower:]" "[:upper:]"); ./hst.imager fs extract "{}" "././WBTest.hdf/rdb/dh3/Games/$dir"' \;
